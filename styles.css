@@ -685,3 +685,15 @@ footer { padding-bottom: 112px; }
  .writing-topline { flex-direction: column; gap: 12px; margin-bottom: 28px; }
  .writing-intro { font-size: 16px; }
 }
+/* Typography audit: comfortable phone body copy and wider tablet reading columns. */
+.role-summary, .leadership-principle p { overflow-wrap: break-word; }
+@media (max-width: 480px) {
+ .role-summary, .leadership-principle p { font-size: 15px; line-height: 1.8; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+ .writing-topics { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+ .writing-topics article { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.2fr); gap: 10px 30px; align-items: start; }
+ .writing-topic-index { grid-column: 1; }
+ .writing-topics h4 { grid-column: 1; margin-top: 0; }
+ .writing-topics p { grid-column: 2; grid-row: 1 / span 2; margin-top: 0; font-size: 16px; }
+}
