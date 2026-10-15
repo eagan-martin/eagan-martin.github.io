@@ -608,3 +608,80 @@ footer { padding-bottom: 112px; }
 @media (max-width: 480px) {
  .story-editorial-portrait figcaption { flex-direction: column; gap: 4px; font-size: 9px; }
 }
+.leadership-practice { border-top: 1px solid var(--line); padding-block: 44px 48px; scroll-margin-top: 24px; }
+.leadership-practice .skills-heading { margin-bottom: 24px; }
+.leadership-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 40px; }
+.leadership-grid article { border-top: 1px solid #404040; padding-top: 24px; }
+.leadership-grid .eyebrow { font-size: 10px; color: #999; }
+.leadership-grid h4 { font-size: 23px; letter-spacing: -.025em; margin-top: 16px; line-height: 1.3; }
+.leadership-grid p { font-size: 15px; color: #aaa; margin-top: 16px; max-width: 60ch; }
+@media (max-width: 767px) { .leadership-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; } .leadership-grid h4 { font-size: 22px; } }
+/* Leadership: a calm introduction alongside a sequence of everyday practices. */
+.leadership-editorial { padding-block: 64px; }
+.leadership-opening { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.2fr); gap: clamp(36px, 7vw, 100px); align-items: start; }
+.leadership-introduction { position: sticky; top: 36px; }
+.leadership-introduction > .eyebrow { font-size: 10px; color: #999; }
+.leadership-introduction h3 { font-size: clamp(34px, 3.7vw, 52px); line-height: 1.14; letter-spacing: -.045em; margin-top: 24px; }
+.leadership-introduction > p { font-size: 16px; line-height: 1.8; color: #aaa; margin-top: 28px; max-width: 42ch; }
+.leadership-signature { display: flex; align-items: center; gap: 18px; margin-top: 32px; padding-top: 24px; border-top: 1px solid #333; }
+.leadership-mark { width: 65px; flex: 0 0 65px; color: #ccc; }
+.leadership-mark svg { display: block; width: 100%; }
+.leadership-signature > span:last-child { font-size: 9px; line-height: 1.8; letter-spacing: .1em; color: #999; }
+.leadership-principle { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 22px; padding-block: 28px 32px; border-top: 1px solid #444; }
+.leadership-principle:last-child { border-bottom: 1px solid #444; }
+.principle-number { font-size: 30px; font-weight: 400; line-height: 1; letter-spacing: -.04em; color: #777; padding-top: 3px; }
+.leadership-principle .eyebrow { color: #999; font-size: 9px; letter-spacing: .1em; }
+.leadership-principle h4 { font-size: clamp(23px, 2vw, 28px); line-height: 1.25; letter-spacing: -.025em; margin-top: 12px; }
+.leadership-principle p { color: #aaa; font-size: 15px; line-height: 1.8; margin-top: 16px; max-width: 60ch; }
+@media (max-width: 1023px) {
+ .leadership-opening { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+ .leadership-introduction { position: static; }
+ .leadership-introduction > p { max-width: 65ch; }
+ .leadership-signature { max-width: 400px; }
+}
+@media (max-width: 480px) {
+ .leadership-editorial { padding-block: 40px; }
+ .leadership-introduction h3 { font-size: 34px; }
+ .leadership-principle { grid-template-columns: 28px minmax(0, 1fr); gap: 16px; padding-block: 24px 28px; }
+ .principle-number { font-size: 24px; }
+ .leadership-principle h4 { font-size: 23px; }
+ .leadership-principle p { font-size: 14px; }
+}
+@media (max-height: 650px) { .leadership-introduction { position: static; } }
+/* Writing: an editorial introduction, manuscript illustration, and subject index. */
+.writing-editorial { padding-block: 56px; border-top: 1px solid #444; scroll-margin-top: 24px; }
+.writing-topline { display: flex; align-items: start; justify-content: space-between; gap: 24px; margin-bottom: 36px; }
+.writing-topline .eyebrow,.writing-edition { font-size: 10px; color: #999; letter-spacing: .09em; }
+.writing-edition { text-align: right; white-space: nowrap; }
+.writing-opening { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: clamp(32px, 6vw, 80px); align-items: center; padding-bottom: 44px; }
+.writing-opening h3 { font-size: clamp(32px, 4vw, 56px); line-height: 1.15; letter-spacing: -.04em; }
+.writing-intro { max-width: 60ch; color: #aaa; font-size: 17px; line-height: 1.8; margin-top: 26px; }
+.writing-visual { color: #999; background: #191919; border: 1px solid #333; border-radius: 4px; padding: 16px; }
+.writing-visual svg { display: block; width: 100%; }
+.writing-visual > span { display: block; text-align: center; font-size: 8px; letter-spacing: .1em; margin-top: 10px; color: #999; }
+.writing-topics { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 36px; }
+.writing-topics article { border-top: 1px solid #444; padding-top: 24px; }
+.writing-topic-index { font-size: 10px; letter-spacing: .09em; color: #888; }
+.writing-topics h4 { margin-top: 18px; font-size: 25px; letter-spacing: -.025em; line-height: 1.3; }
+.writing-topics p { font-size: 15px; line-height: 1.8; color: #aaa; margin-top: 18px; }
+.writing-closing { border-top: 1px solid #333; margin-top: 36px; padding-top: 24px; display: flex; justify-content: space-between; align-items: baseline; gap: 24px; }
+.writing-closing > span { color: #888; font-size: 9px; letter-spacing: .1em; }
+.writing-closing p { color: #aaa; font-size: 12px; }
+@media (max-width: 1023px) {
+ .writing-opening { grid-template-columns: minmax(0,1fr) 170px; gap: 28px; }
+ .writing-opening h3 { font-size: 36px; }
+ .writing-topics { gap: 24px; }
+ .writing-topics h4 { font-size: 22px; }
+ .writing-closing { align-items: start; flex-direction: column; gap: 10px; }
+}
+@media (max-width: 767px) {
+ .writing-opening { grid-template-columns: minmax(0,1fr); gap: 28px; padding-bottom: 32px; }
+ .writing-visual { width: 100%; max-width: 240px; }
+ .writing-opening h3 { font-size: clamp(30px,6.5vw,44px); }
+ .writing-topics { grid-template-columns: minmax(0,1fr); gap: 28px; }
+ .writing-topics h4 br { display: none; }
+ .writing-topics h4 { font-size: 24px; margin-top: 12px; }
+ .writing-topics p { margin-top: 12px; max-width: 60ch; }
+ .writing-topline { flex-direction: column; gap: 12px; margin-bottom: 28px; }
+ .writing-intro { font-size: 16px; }
+}
