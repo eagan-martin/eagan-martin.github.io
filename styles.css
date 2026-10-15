@@ -248,17 +248,17 @@ section[id] { scroll-margin-top: 24px; }
 .career-role { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.35fr); gap: clamp(32px, 6vw, 88px); border-top: 1px solid var(--line); padding-block: 44px 48px; scroll-margin-top: 24px; }
 .role-context .eyebrow { display: block; font-size: 10px; color: #b0b0b0; }
 .role-date { font-size: 13px; color: #b0b0b0; margin-top: 14px; }
-.role-context h3 { font-size: clamp(24px, 2.4vw, 34px); letter-spacing: -.03em; margin-top: 14px; overflow-wrap: break-word; }
+.role-context h4 { font-size: clamp(24px, 2.4vw, 34px); letter-spacing: -.03em; margin-top: 14px; overflow-wrap: break-word; }
 .current-role { display: inline-block; font-size: 11px; color: #d0d0d0; border: 1px solid #606060; border-radius: 20px; padding: 5px 12px; margin-top: 20px; }
-.role-contributions h4 { font-size: 20px; font-weight: 500; letter-spacing: -.02em; }
+.role-contributions h5 { font-size: 20px; font-weight: 500; letter-spacing: -.02em; }
 .role-contributions ul { margin: 20px 0 0; padding-left: 18px; color: #b0b0b0; font-size: 15px; }
 .role-contributions li { margin-block: 14px; padding-left: 5px; line-height: 1.8; }
 .role-contributions strong { font-weight: 600; color: #e0e0e0; }
 .writing-practice { margin-top: 8px; }
 @media (max-width: 767px) {
  .career-role { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-block: 34px 38px; }
- .role-context h3 { font-size: 27px; max-width: 30ch; }
- .role-contributions h4 { font-size: 20px; }
+ .role-context h4 { font-size: 27px; max-width: 30ch; }
+ .role-contributions h5 { font-size: 20px; }
  .role-contributions ul { font-size: 15px; }
 }
 .story-narrative h3 { font-size: 20px; line-height: 1.3; letter-spacing: -.025em; margin-block: 30px 14px; }
@@ -273,7 +273,7 @@ section[id] { scroll-margin-top: 24px; }
 .work-index p { font-size: 19px; line-height: 1.5; margin-top: 12px; color: #d0d0d0; }
 .work-navigation { display: flex; flex-wrap: wrap; gap: 8px; border-top: 1px solid #343434; border-bottom: 1px solid #343434; padding-block: 14px; margin-bottom: 56px; }
 .work-navigation a { display: inline-flex; align-items: center; gap: 18px; min-height: 44px; padding: 8px 18px; border: 1px solid transparent; border-radius: 4px; color: #b0b0b0; font-size: 12px; }
-.work-navigation a:first-child { border-color: #505050; color: white; }
+.work-navigation a[aria-current="location"] { border-color: #505050; color: white; }
 .work-navigation a:hover { background: #1c1c1c; color: white; }
 .work-navigation a span { font-size: 10px; color: #999; }
 .employer-group { display: grid; grid-template-columns: minmax(0, .7fr) minmax(0, 1.9fr); gap: clamp(32px, 5vw, 72px); margin-bottom: 64px; }
@@ -290,9 +290,9 @@ section[id] { scroll-margin-top: 24px; }
 .role-context { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; border-bottom: 1px solid #303030; padding-bottom: 22px; margin-bottom: 22px; }
 .role-context .eyebrow { color: #888; font-size: 9px; }
 .role-date { margin: 0 0 0 auto; color: #bbb; font-size: 11px; }
-.role-context h3 { width: 100%; max-width: none; font-size: clamp(21px, 2vw, 28px); margin-top: 6px; letter-spacing: -.025em; line-height: 1.25; }
+.role-context h4 { width: 100%; max-width: none; font-size: clamp(21px, 2vw, 28px); margin-top: 6px; letter-spacing: -.025em; line-height: 1.25; }
 .current-role { margin-top: 4px; font-size: 10px; border-color: #707070; background: #252525; color: #fff; }
-.role-contributions h4 { font-size: 14px; color: #bbb; font-weight: 500; letter-spacing: 0; }
+.role-contributions h5 { font-size: 14px; color: #bbb; font-weight: 500; letter-spacing: 0; }
 .role-contributions ul { margin-top: 16px; font-size: 14px; padding-left: 16px; }
 .role-contributions li { line-height: 1.75; padding-left: 3px; margin-block: 12px; color: #aaa; }
 .role-contributions li:last-child { margin-bottom: 0; }
@@ -314,7 +314,7 @@ section[id] { scroll-margin-top: 24px; }
  .employer-roles { padding-left: 22px; }
  .career-role { padding: 22px; }
  .career-role:before { left: -27px; }
- .role-context h3 { font-size: 22px; }
+ .role-context h4 { font-size: 22px; }
 }
 @media (max-width: 767px) {
  .work-heading { display: block; }
@@ -331,13 +331,13 @@ section[id] { scroll-margin-top: 24px; }
  .employer-count { margin-top: 4px; }
  .employer-roles { margin-left: 4px; }
  .career-role { padding: 22px; }
- .role-context h3 { font-size: 23px; }
+ .role-context h4 { font-size: 23px; }
 }
 @media (max-width: 480px) {
  .career-role { padding: 20px 16px; }
  .role-date { margin-left: 0; width: 100%; }
  .role-context { gap: 6px; padding-bottom: 18px; margin-bottom: 18px; }
- .role-context h3 { font-size: 21px; }
+ .role-context h4 { font-size: 21px; }
  .role-contributions ul { font-size: 14px; }
  .employer-summary h3 { font-size: 21px; }
  .employer-roles { padding-left: 16px; }
@@ -358,7 +358,7 @@ footer { padding-bottom: 112px; }
  .role-summary { font-size: 14px; }
 }
 /* Give each role's narrative subtitle a clear heading hierarchy. */
-.role-contributions h4 {
+.role-contributions h5 {
   font-size: 19px;
   font-weight: 600;
   line-height: 1.35;
@@ -366,7 +366,7 @@ footer { padding-bottom: 112px; }
   color: #f5f5f5;
 }
 @media (max-width: 480px) {
-  .role-contributions h4 { font-size: 18px; }
+  .role-contributions h5 { font-size: 18px; }
 }
 /* Quiet, decorative SVG scenes accompany each role's narrative. */
 .role-summary-layout { display: grid; grid-template-columns: minmax(0, 1fr) 136px; align-items: center; gap: 24px; margin-top: 18px; }
@@ -730,3 +730,26 @@ footer { padding-bottom: 112px; }
  .story-editorial .lesson-heading { gap: 12px; }
  .story-editorial .lesson-heading h4 { font-size: 22px; }
 }
+/* Technology logos and skill symbols remain monochrome and decorative. */
+.skill-group li { display: inline-flex; align-items: center; gap: 8px; max-width: 100%; }
+.skill-group li > span { min-width: 0; overflow-wrap: break-word; }
+.skill-icon { display: block; width: 15px; height: 15px; flex: 0 0 15px; overflow: visible; }
+.skill-icon.brand { fill: currentColor; stroke: none; }
+.skill-icon.symbol { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Keep role heading semantics aligned with the employer and work hierarchy. */
+h5 { margin: 0; font-family: inherit; }
+/* A regional map complements the contact location without exposing an address. */
+.contact-bottom { align-items: flex-start; }
+.contact-location { width: min(100%, 520px); min-width: 0; }
+.location-label { display: block; font-size: 10px; font-weight: 500; line-height: 1.6; letter-spacing: .09em; color: #aaa; }
+.location-map { margin-top: 18px; overflow: hidden; border: 1px solid #444; border-radius: 4px; background: #ddd; }
+.location-map iframe { display: block; width: 100%; height: 260px; border: 0; filter: grayscale(1) invert(1); }
+@media (max-width: 1023px) { .contact-location { width: 100%; max-width: 600px; } }
+@media (max-width: 480px) { .location-map iframe { height: 220px; } }
+
+/* Let the regional map span the contact section. */
+.contact-bottom { flex-direction: column; align-items: stretch; gap: 28px; }
+.contact-location { width: 100%; max-width: none; }
+.location-map iframe { height: clamp(260px, 30vw, 400px); }
+.contact-bottom .socials { flex-wrap: wrap; }
