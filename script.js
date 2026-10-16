@@ -40,3 +40,15 @@ window.addEventListener('hashchange', scheduleUpdate);
 floatingNavigation.addEventListener('focusout', scheduleUpdate);
 updateProgress();
 document.querySelector('#year').textContent = new Date().getFullYear();
+
+// Reveal the cost chart once as it enters view; its data remains visible without JS.
+const costChart = document.querySelector('.cost-line-chart');
+if (costChart && 'IntersectionObserver' in window) {
+  const chartObserver = new IntersectionObserver(entries => {
+    if (entries.some(entry => entry.isIntersecting)) {
+      costChart.classList.add('chart-reveal');
+      chartObserver.disconnect();
+    }
+  }, { threshold: 0.2 });
+  chartObserver.observe(costChart);
+}

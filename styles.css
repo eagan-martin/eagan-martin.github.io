@@ -973,3 +973,56 @@ h5 { margin: 0; font-family: inherit; }
 .case-milestones .case-result { grid-template-columns: max-content 24px; justify-content: start; }
 .case-result > strong { grid-column: 1; }
 .case-result .reduction-indicator { grid-column: 2; }
+
+/* Decorative cloud activity, separate from the measured spending chart. */
+.case-opening { display: grid; grid-template-columns: minmax(0,1fr) 220px; gap: 48px; align-items: center; }
+.case-opening-copy > p { margin-top: 24px; max-width: 82ch; }
+.case-cloud-art { width: 100%; max-width: 220px; color: #999; justify-self: end; }
+.case-cloud-art svg { width: 100%; height: auto; display: block; overflow: visible; }
+.cloud-orbit { stroke: #333; }
+.cloud-outline { animation: case-cloud-float 7s ease-in-out infinite; }
+.cloud-inner { stroke: #666; }
+.cloud-route { stroke: #555; stroke-dasharray: 3 6; animation: case-cloud-flow 5s linear infinite; }
+.cloud-node { fill: #151515; }
+.cloud-packet { fill: #ddd; stroke: none; animation: case-cloud-pulse 4s ease-in-out infinite; }
+.cloud-packet-two { animation-delay: 1.2s; }.cloud-packet-three { animation-delay: 2.4s; }
+@keyframes case-cloud-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+@keyframes case-cloud-flow { to { stroke-dashoffset: -36; } }
+@keyframes case-cloud-pulse { 0%,100% { opacity: .25; } 50% { opacity: 1; } }
+@media(max-width:767px) { .case-opening { grid-template-columns: minmax(0,1fr); gap: 24px; }.case-cloud-art { max-width: 150px; justify-self: start; }.case-opening-copy > p { margin-top: 20px; } }
+@media(prefers-reduced-motion:reduce) { .case-cloud-art * { animation: none !important; } }
+
+/* Keep the cloud accent compact on phones instead of adding a separate row. */
+@media (min-width:768px) and (max-width:1023px) {
+ .case-opening { grid-template-columns: minmax(0,1fr) 140px; gap: 28px; }
+ .case-cloud-art { max-width: 140px; }
+}
+@media (max-width:767px) {
+ .case-opening { position: relative; display: block; }
+ .case-cloud-art { position: absolute; top: -7px; right: 0; width: 72px; max-width: 72px; }
+ .case-opening-copy > div > .eyebrow { display: block; max-width: calc(100% - 88px); min-height: 40px; line-height: 1.7; }
+ .case-opening h3 { margin-top: 16px; font-size: clamp(30px,6.5vw,40px); }
+ .case-opening-copy > p { margin-top: 20px; }
+}
+
+/* The measured chart supplies motion; the opening stays focused on the story. */
+.case-opening { display: block; }
+.case-opening-copy > div > .eyebrow { max-width: none; min-height: 0; }
+.case-opening h3 { margin-top: 20px; }
+.chart-reveal .cost-series { animation: cost-line-reveal 2.2s ease-out both; }
+.chart-reveal .cost-marker,.chart-reveal .cost-annotation { animation: cost-label-reveal .6s ease-out 1.8s both; }
+@keyframes cost-line-reveal { from { stroke-dasharray: 1; stroke-dashoffset: 1; } to { stroke-dasharray: 1; stroke-dashoffset: 0; } }
+@keyframes cost-label-reveal { from { opacity: 0; } to { opacity: 1; } }
+@media(prefers-reduced-motion:reduce) { .chart-reveal .cost-series,.chart-reveal .cost-marker,.chart-reveal .cost-annotation { animation: none; } }
+
+/* Ambient map motion leaves Google's interactive controls unobstructed. */
+.location-label { display: flex; align-items: center; gap: 12px; }
+.location-pulse { position: relative; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #ccc; flex: 0 0 6px; }
+.location-pulse:after { content: ''; position: absolute; inset: -4px; border: 1px solid #aaa; border-radius: 50%; animation: map-location-pulse 3.5s ease-out infinite; }
+.location-map { position: relative; animation: map-frame-breathe 7s ease-in-out infinite; }
+@keyframes map-location-pulse { 0% { transform: scale(.6); opacity: .7; } 75%,100% { transform: scale(1.8); opacity: 0; } }
+@keyframes map-frame-breathe { 0%,100% { border-color: #444; box-shadow: 0 0 0 0 rgba(255,255,255,0); } 50% { border-color: #777; box-shadow: 0 0 18px 0 rgba(255,255,255,.045); } }
+@media(prefers-reduced-motion:reduce) { .location-map,.location-pulse:after { animation: none; } }
+
+/* Balance the journey label between its surrounding dividers. */
+.case-timeline-label { padding-bottom: 44px; }
