@@ -1,0 +1,5 @@
+
+# Private source material; never publish with the portfolio.
+/reference/
+/references/
+.DS_Store
